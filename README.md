@@ -127,10 +127,27 @@ it('calls callback after 100ms', funciton(){
   clock.tick(1);
   assert(callback.calledOnce);
 });
-
 ```
 
+```js
+afterEach(() => {
+  sinon.restore();
+});
+
+describe('My test suite', () => {
+  afterEach(() => {
+    ainon.restore();
+  });
+});
+
+
+var fake = sinon.fake();
+fake();
+console.log(fake.callCount);
+
+var fake = sinon.fake.returns('apple pie');
+fake();
 ```
-```
+
 
 
